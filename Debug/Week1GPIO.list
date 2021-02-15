@@ -402,12 +402,12 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(HAL_GetTick() - ButtonTimeStamp >= 100)
+	if(HAL_GetTick() - ButtonTimeStamp >= 50)
  80004fc:	f000 faa6 	bl	8000a4c <HAL_GetTick>
  8000500:	4602      	mov	r2, r0
  8000502:	687b      	ldr	r3, [r7, #4]
  8000504:	1ad3      	subs	r3, r2, r3
- 8000506:	2b63      	cmp	r3, #99	; 0x63
+ 8000506:	2b31      	cmp	r3, #49	; 0x31
  8000508:	d926      	bls.n	8000558 <main+0x80>
 	{
 		SwitchState[0] = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
@@ -501,7 +501,7 @@ int main(void)
  800058e:	f44f 7100 	mov.w	r1, #512	; 0x200
  8000592:	4802      	ldr	r0, [pc, #8]	; (800059c <main+0xc4>)
  8000594:	f000 fce6 	bl	8000f64 <HAL_GPIO_WritePin>
-	if(HAL_GetTick() - ButtonTimeStamp >= 100)
+	if(HAL_GetTick() - ButtonTimeStamp >= 50)
  8000598:	e7b0      	b.n	80004fc <main+0x24>
  800059a:	bf00      	nop
  800059c:	40020000 	.word	0x40020000
