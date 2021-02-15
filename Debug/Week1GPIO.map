@@ -2779,29 +2779,29 @@ LOAD c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000000000358       0x22 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(Week1GPIO.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x5694
- .debug_info    0x0000000000000000      0xbd5 Core/Src/main.o
- .debug_info    0x0000000000000bd5      0x963 Core/Src/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000001538      0x20a Core/Src/stm32f4xx_it.o
- .debug_info    0x0000000000001742      0x57e Core/Src/system_stm32f4xx.o
- .debug_info    0x0000000000001cc0       0x22 Core/Startup/startup_stm32f411retx.o
- .debug_info    0x0000000000001ce2      0x8d5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x00000000000025b7      0xd98 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x000000000000334f      0x7d7 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x0000000000003b26      0x92a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x0000000000004450     0x1244 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+.debug_info     0x0000000000000000     0x5698
+ .debug_info    0x0000000000000000      0xbd9 Core/Src/main.o
+ .debug_info    0x0000000000000bd9      0x963 Core/Src/stm32f4xx_hal_msp.o
+ .debug_info    0x000000000000153c      0x20a Core/Src/stm32f4xx_it.o
+ .debug_info    0x0000000000001746      0x57e Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000000000001cc4       0x22 Core/Startup/startup_stm32f411retx.o
+ .debug_info    0x0000000000001ce6      0x8d5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x00000000000025bb      0xd98 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x0000000000003353      0x7d7 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x0000000000003b2a      0x92a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x0000000000004454     0x1244 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
-.debug_abbrev   0x0000000000000000     0x10d2
- .debug_abbrev  0x0000000000000000      0x1f8 Core/Src/main.o
- .debug_abbrev  0x00000000000001f8      0x18c Core/Src/stm32f4xx_hal_msp.o
- .debug_abbrev  0x0000000000000384       0xc6 Core/Src/stm32f4xx_it.o
- .debug_abbrev  0x000000000000044a      0x12b Core/Src/system_stm32f4xx.o
- .debug_abbrev  0x0000000000000575       0x12 Core/Startup/startup_stm32f411retx.o
- .debug_abbrev  0x0000000000000587      0x1f2 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_abbrev  0x0000000000000779      0x2fa Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_abbrev  0x0000000000000a73      0x1c9 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_abbrev  0x0000000000000c3c      0x245 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_abbrev  0x0000000000000e81      0x251 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+.debug_abbrev   0x0000000000000000     0x10e1
+ .debug_abbrev  0x0000000000000000      0x207 Core/Src/main.o
+ .debug_abbrev  0x0000000000000207      0x18c Core/Src/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x0000000000000393       0xc6 Core/Src/stm32f4xx_it.o
+ .debug_abbrev  0x0000000000000459      0x12b Core/Src/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000584       0x12 Core/Startup/startup_stm32f411retx.o
+ .debug_abbrev  0x0000000000000596      0x1f2 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_abbrev  0x0000000000000788      0x2fa Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_abbrev  0x0000000000000a82      0x1c9 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_abbrev  0x0000000000000c4b      0x245 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_abbrev  0x0000000000000e90      0x251 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
 .debug_aranges  0x0000000000000000      0x5d8
  .debug_aranges

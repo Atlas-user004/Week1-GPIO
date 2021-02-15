@@ -105,7 +105,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(HAL_GetTick() - ButtonTimeStamp >= 50)
+	if(HAL_GetTick() - ButtonTimeStamp >= 100)
 	{
 		SwitchState_S1[0] = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 		if(SwitchState_S1[1] == GPIO_PIN_SET && SwitchState_S1[0] == GPIO_PIN_RESET)
@@ -142,6 +142,10 @@ int main(void)
 			}
 		}
 		SwitchState_S2[1] = SwitchState_S2[0];
+
+
+
+
 		//SwitchState_S3[0] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5);
 	}
 	//Run LED
