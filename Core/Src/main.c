@@ -116,7 +116,11 @@ int main(void)
 			{
 				LED1_Period = 250;
 			}
-			else
+			else if(LED1_Period == 250) // 2 Hz
+			{
+				LED1_Period = 167;
+			}
+			else // 3 Hz
 			{
 				LED1_Period = 1000;
 			}
