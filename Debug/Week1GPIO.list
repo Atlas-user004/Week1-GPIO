@@ -27,9 +27,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00005698  00000000  00000000  0002003c  2**0
+ 12 .debug_info   0000569a  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 000010e1  00000000  00000000  000256d4  2**0
+ 13 .debug_abbrev 000010e1  00000000  00000000  000256d6  2**0
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_aranges 000005d8  00000000  00000000  000267b8  2**3
                   CONTENTS, READONLY, DEBUGGING
@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  16 .debug_macro  00014701  00000000  00000000  000272d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00004f86  00000000  00000000  0003b9d1  2**0
+ 17 .debug_line   00004f89  00000000  00000000  0003b9d1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    00080e69  00000000  00000000  00040957  2**0
+ 18 .debug_str    00080e69  00000000  00000000  0004095a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000c17c0  2**0
+ 19 .comment      0000007b  00000000  00000000  000c17c3  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000016bc  00000000  00000000  000c183c  2**2
+ 20 .debug_frame  000016bc  00000000  00000000  000c1840  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -412,6 +412,7 @@ int main(void)
  8000506:	2b63      	cmp	r3, #99	; 0x63
  8000508:	d946      	bls.n	8000598 <main+0xc0>
 	{
+		// ex1 Switch Part
 		SwitchState_S1[0] = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
  800050a:	f44f 6180 	mov.w	r1, #1024	; 0x400
  800050e:	4833      	ldr	r0, [pc, #204]	; (80005dc <main+0x104>)
@@ -466,7 +467,7 @@ int main(void)
 		SwitchState_S1[1] = SwitchState_S1[0];
  8000554:	7a3b      	ldrb	r3, [r7, #8]
  8000556:	727b      	strb	r3, [r7, #9]
-		// ex2
+		// ex2 All Part
 		SwitchState_S2[0] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3);
  8000558:	2108      	movs	r1, #8
  800055a:	4821      	ldr	r0, [pc, #132]	; (80005e0 <main+0x108>)
@@ -508,11 +509,11 @@ int main(void)
 		SwitchState_S2[1] = SwitchState_S2[0];
  8000594:	793b      	ldrb	r3, [r7, #4]
  8000596:	717b      	strb	r3, [r7, #5]
-
-
-		//SwitchState_S3[0] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5);
+			//}
+		//}
+		//SwitchState_S3[1] = SwitchState_S3[0];
 	}
-	//Run LED
+	// ex1 LED Part
 	if(HAL_GetTick() - TimeStamp >= LED1_Period)
  8000598:	f000 fab0 	bl	8000afc <HAL_GetTick>
  800059c:	4602      	mov	r2, r0

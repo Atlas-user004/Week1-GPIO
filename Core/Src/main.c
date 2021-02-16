@@ -95,6 +95,9 @@ int main(void)
   uint16_t LED1_Period = 1000; // this is 1000 mS.
   uint32_t TimeStamp = 0;
   uint32_t ButtonTimeStamp = 0;
+  //uint8_t LED3_OnValue = 500; // LED on 500 mS.
+  //uint8_t LED3_OFFValue = 1500; // LED off 1500 mS.
+  //uint32_t LED3_TimeStamp = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,6 +110,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	if(HAL_GetTick() - ButtonTimeStamp >= 100)
 	{
+		// ex1 Switch Part
 		SwitchState_S1[0] = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 		if(SwitchState_S1[1] == GPIO_PIN_SET && SwitchState_S1[0] == GPIO_PIN_RESET)
 		{
@@ -128,7 +132,7 @@ int main(void)
 			}
 		}
 		SwitchState_S1[1] = SwitchState_S1[0];
-		// ex2
+		// ex2 All Part
 		SwitchState_S2[0] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3);
 		if(SwitchState_S2[1] == GPIO_PIN_SET && SwitchState_S2[0] == GPIO_PIN_RESET)
 		{
@@ -142,13 +146,24 @@ int main(void)
 			}
 		}
 		SwitchState_S2[1] = SwitchState_S2[0];
-
-
-
-
+		// ex3 Switch Part
 		//SwitchState_S3[0] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5);
+		//if(SwitchState_S3[1] == GPIO_PIN_SET && SwitchState_S3[0] == GPIO_PIN_RESET)
+		//{
+			//if(LED3_OnValue == 500 && LED3_OFFValue == 1500)
+			//{
+				//LED3_OnValue = 1500;
+				//LED3_OFFValue = 500;
+			//}
+			//else
+			//{
+				//LED3_OnValue = 500;
+				//LED3_OFFValue = 1500;
+			//}
+		//}
+		//SwitchState_S3[1] = SwitchState_S3[0];
 	}
-	//Run LED
+	// ex1 LED Part
 	if(HAL_GetTick() - TimeStamp >= LED1_Period)
 	{
 		TimeStamp = HAL_GetTick();
@@ -161,7 +176,8 @@ int main(void)
 		{
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);
 		}
-	  }
+	}
+	// ex3 LED Part
   }
   /* USER CODE END 3 */
 }
